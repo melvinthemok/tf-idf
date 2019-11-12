@@ -1,0 +1,16 @@
+.Feedback {
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+}
+
+.Feedback__positive {
+  border: 1px solid #c3e6cb;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.Feedback__negative {
+  border: 1px solid #f5c6cb;
+  background-color: #f8d7da;
+  color: #721c24
+}

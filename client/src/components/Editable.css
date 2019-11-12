@@ -1,0 +1,24 @@
+.Editable {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #36454f;
+  border-radius: 3px;
+}
+
+.Editable p {
+  margin: 0 0 0.5rem;
+}
+
+.Editable button {
+  background-color: #155724;
+  color: #ffffff;
+  margin-top: 1rem;
+  align-self: flex-end;
+}
+
+.Editable button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}

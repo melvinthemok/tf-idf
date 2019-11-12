@@ -1,0 +1,7 @@
+.Waiting {
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 0.35rem 0.75rem;
+}

@@ -1,0 +1,14 @@
+.NavItem {
+  background-color: #ffffff;
+  color: #778899;
+  margin-right: 0.65rem;
+}
+
+.NavItem:hover:enabled {
+  margin-top: -0.2rem;
+}
+
+.NavItem:disabled {
+  background-color: #155724;
+  color: #ffffff;
+}

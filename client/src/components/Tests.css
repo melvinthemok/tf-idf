@@ -1,0 +1,10 @@
+.Tests {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #36454f;
+  border-radius: 3px;
+}
+
+.Tests p {
+  margin: 0 0 0.5rem;
+}

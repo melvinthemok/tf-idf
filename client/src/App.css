@@ -1,0 +1,66 @@
+.App {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #36454f;
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .App {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.App__left, .App__right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.App__left {
+  margin: 3rem 3rem 0;
+}
+
+.App__right {
+  margin: 3rem;
+}
+
+@media (max-width: 900px) {
+  .App__left {
+    margin: 3rem 2rem 0;
+  }
+  
+  .App__right {
+    margin: 3rem 2rem;
+  }
+}
+
+.App h1, .App h2 {
+  font-weight: normal;
+}
+
+.App p {
+  margin: 1rem 0;
+  line-height: 1.5rem;
+}
+
+.App code {
+  white-space: pre-wrap;
+}
+
+.App button {
+  font-size: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 0.35rem 0.75rem;
+
+}
+
+.App button:hover:enabled {
+  opacity: 0.5;
+  cursor: pointer;
+}
