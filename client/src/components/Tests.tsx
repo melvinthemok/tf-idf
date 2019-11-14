@@ -6,7 +6,11 @@ import "codemirror/mode/python/python"
 import "codemirror/lib/codemirror.css"
 import "codemirror/theme/material-ocean.css"
 
-const Tests = props => {
+type TestProps = {
+  value: string
+}
+
+const Tests = (props: TestProps) => {
   return (
     <div className="Tests">
       <p>...to pass these tests</p>

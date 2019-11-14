@@ -6,7 +6,14 @@ import "codemirror/mode/python/python"
 import "codemirror/lib/codemirror.css"
 import "codemirror/theme/material-ocean.css"
 
-const Editable = props => {
+type EditableProps = {
+  value: string,
+  handleChange: ((v: string) => void),
+  submit: (() => void),
+  isLocked: boolean
+}
+
+const Editable = (props: EditableProps) => {
   const { value, handleChange, submit, isLocked } = props
 
   return (

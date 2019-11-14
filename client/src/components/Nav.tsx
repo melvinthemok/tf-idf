@@ -3,7 +3,13 @@ import "./Nav.css"
 
 import NavItem from "./NavItem"
 
-const Nav = props => {
+type NavProps = {
+  numberItems: number,
+  current: number,
+  setCurrentItem: ((n: number) => void)
+}
+
+const Nav = (props: NavProps) => {
   const navItems = []
   for (let i = 0; i < props.numberItems; i++) {
     navItems.push(
@@ -11,7 +17,7 @@ const Nav = props => {
         key={i}
         id={i}
         current={props.current}
-        select={(number) => props.setCurrentItem(number)}
+        select={(n: number) => props.setCurrentItem(n)}
       />
     )
   }

@@ -5,7 +5,15 @@ import Waiting from "./Waiting"
 import Feedback from "./Feedback"
 import Tests from "./Tests"
 
-const Practice = props => {
+import { EDITABLE_PART, HIDDEN_PART, TESTS_PART } from "../lib/constants"
+
+type PracticeProps = {
+  editable: EDITABLE_PART,
+  hidden: HIDDEN_PART,
+  tests: TESTS_PART
+}
+
+const Practice = (props: PracticeProps) => {
   const [editable, setEditable] = useState(props.editable)
   const [locked, setLocked] = useState(false)
   const [waiting, setWaiting] = useState(false)

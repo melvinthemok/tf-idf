@@ -1,7 +1,13 @@
 import React from "react"
 import "./NavItem.css"
 
-const NavItem = props => {
+type NavItemProps = {
+  id: number,
+  current: number,
+  select: ((id: number) => void)
+}
+
+const NavItem = (props: NavItemProps) => {
   return (
     <button
       disabled={props.current === props.id}

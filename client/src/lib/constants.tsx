@@ -1,4 +1,8 @@
-const CONTENT = [
+type CONTENT_PART = {
+  __html: string
+}
+
+const CONTENT: CONTENT_PART[] = [
   {
     __html: `
       <h2>Term frequency</h2>
@@ -177,7 +181,9 @@ dot_product / magnitude where:
   }
 ]
 
-const EDITABLE = [
+type EDITABLE_PART = string
+
+const EDITABLE: EDITABLE_PART[] = [
   `def count_words(document: str) -> dict:
 	count = {}
 	for word in document.split():
@@ -288,7 +294,18 @@ const EDITABLE = [
 `
 ]
 
-const HIDDEN = [
+type HIDDEN_PART = {
+  function_name: string,
+  function_return_type: string,
+  test_query: string,
+  test_cases: {
+    [key: string]: {
+      [key: string]: number
+    }
+  }
+}
+
+const HIDDEN: HIDDEN_PART[] = [
   {
     "function_name": "count_words",
     "function_return_type": "dict",
@@ -342,7 +359,9 @@ const HIDDEN = [
   }
 ]
 
-const TESTS = [
+type TESTS_PART = string
+
+const TESTS: TESTS_PART[] = [
   `assert count_words('buffalo buffalo buffalo buffalo buffalo buffalo buffalo buffalo') == { 'buffalo': 8 }, "Oops, your function isn't returning the correct value. Try again!"
 
 assert count_words('she was young the way an actual young person is young') == { 'she': 1, 'was': 1, 'young': 3, 'the': 1, 'way': 1, 'an': 1, 'actual': 1, 'person': 1, 'is': 1 }, "Oops, your function isn't returning the correct value. Try again!"
@@ -365,7 +384,11 @@ if (![CONTENT, EDITABLE, HIDDEN, TESTS].every(arr => { return arr.length === CON
   throw Error("Length of constants inconsistent")
 }
 
-module.exports = {
+export {
+  CONTENT_PART,
+  EDITABLE_PART,
+  HIDDEN_PART,
+  TESTS_PART,
   CONTENT,
   EDITABLE,
   HIDDEN,

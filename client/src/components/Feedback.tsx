@@ -1,7 +1,12 @@
 import React from "react"
 import "./Feedback.css"
 
-const Feedback = props => {
+type FeedbackProps = {
+  isPositive: boolean,
+  contents: string
+}
+
+const Feedback = (props: FeedbackProps) => {
   return (
     <p className={`Feedback ${ props.isPositive ? "Feedback__positive" : "Feedback__negative" }`}>{props.contents}</p>
   )
